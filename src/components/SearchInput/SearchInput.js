@@ -3,7 +3,15 @@ import classes from './searchInput.module.css';
 
 function SearchInput(props) {
 	return (
-		<input type="text" value={props.value} onChange={props.onChange}/>
+		<div className="wrapper">
+			<input 
+				className={classes.input}
+				type="text" 
+				placeholder="Enter movie title here..."
+				value={props.value} 
+				onChange={props.onChange}
+			/>
+		</div>
 	);
 }
 

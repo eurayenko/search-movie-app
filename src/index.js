@@ -6,7 +6,9 @@ import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-let initialState = {};
+let initialState = {
+	value: ''
+};
 
 let searchAction = (event) => {
 	event.preventDefault();
