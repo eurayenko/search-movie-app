@@ -1,17 +1,18 @@
 import React from 'react';
-import clasess from './Header.module.css';
+import SearchItem from './SearchItem';
+// import classes from './Header.module.css';
 
-function Header() {
+function SearchList(props) {
+	const items = props.items.map(item => <SearchItem 
+		title = {item.title} 
+		overview = {item.overview} 
+		img = {item.poster_path} 
+		/>)
 	return (
-		<header>
-			<div className={clasess.wrapper}>
-				<div className={clasess.logo}>
-					<a href="#"></a>
-				</div>
-				<h1>Movie Search App</h1>
-			</div>
-		</header>
+		<ul className="wrapper">
+			{items}
+		</ul>
 	);
 }
 
-export default Header;
+export default SearchList;

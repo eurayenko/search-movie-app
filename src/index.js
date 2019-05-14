@@ -7,23 +7,16 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 let initialState = {
-	value: ''
+	value: '',
+	searchItems: []
 };
-
-let searchAction = (event) => {
-	event.preventDefault();
-	return {
-		type: 'SERCH_MOVIE',
-		value: event.target.value
-	}
-}
 
 let reducer = (state = initialState, action) => {
 	switch(action.type) {
 		case 'SERCH_MOVIE':
-			return Object.assign({}, state, {value: action.value});
+			return Object.assign({}, state, {searchItems: action.searchItems})
 		case 'INPUT_CHANGE':
-			return Object.assign({}, state, {value: action.value});	
+			return Object.assign({}, state, {value: action.value});		
 		default:
 			return state;	
 	}

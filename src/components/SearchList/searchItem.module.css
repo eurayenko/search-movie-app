@@ -1,0 +1,25 @@
+.item {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 20px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	padding: 5px; 
+}
+
+.img {
+	width: 200px;
+	height: 300px;
+	float: left;
+}
+
+.text {
+	padding-left: 10px;
+	flex-grow: 2;
+	max-width: 814px;
+}
+
+.overview {
+	margin-top: 10px;
+	/*width: 820px;*/
+}
