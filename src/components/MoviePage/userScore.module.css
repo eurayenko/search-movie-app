@@ -1,0 +1,9 @@
+.wrapper {
+	position: relative;
+}
+
+.scoreBar {
+	position: absolute;
+	top: 0;
+	left: 0;
+}

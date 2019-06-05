@@ -7,6 +7,8 @@ function SearchList(props) {
 		title = {item.title} 
 		overview = {item.overview} 
 		img = {item.poster_path} 
+		id = {item.id}
+		onClick = {props.onClick}
 		/>)
 	return (
 		<ul className="wrapper">

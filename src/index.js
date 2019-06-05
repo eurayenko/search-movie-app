@@ -8,7 +8,8 @@ import { Provider } from 'react-redux';
 
 let initialState = {
 	value: '',
-	searchItems: []
+	searchItems: [],
+	movie: {vote_average: 0}
 };
 
 let reducer = (state = initialState, action) => {
@@ -16,7 +17,9 @@ let reducer = (state = initialState, action) => {
 		case 'SERCH_MOVIE':
 			return Object.assign({}, state, {searchItems: action.searchItems})
 		case 'INPUT_CHANGE':
-			return Object.assign({}, state, {value: action.value});		
+			return Object.assign({}, state, {value: action.value});
+		case 'MOVIE_SELECT':
+			return Object.assign({}, state, {movie: action.movieInfo});			
 		default:
 			return state;	
 	}

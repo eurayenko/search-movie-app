@@ -10,4 +10,11 @@ export const searchAction = (data) => {
 		type: 'SERCH_MOVIE',
 		searchItems: data
 	}
+};
+
+export const movieSelectAction = (data) => {
+	return {
+		type: 'MOVIE_SELECT',
+		movieInfo: data
+	}
 }; 
